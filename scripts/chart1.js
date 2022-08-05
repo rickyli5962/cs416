@@ -15,7 +15,7 @@ charts.chart1 = function() {
     data.forEach(function(d) {
       d.date = parseDateTime(d.Premiere);
     });
-    data = data.filter(d => d.date != null);
+    /* data = data.filter(d => d.date != null);*/
     const dataGroupedByYear = Array.from(d3.group(data, d => d.date.getFullYear()));
     const finalData = dataGroupedByYear.map(
         function (item) {
@@ -62,23 +62,7 @@ charts.chart1 = function() {
     const annotations = [
       {
         note: {
-          label: "Starts producing"
-        },
-        connector: {
-          end: "arrow"
-        },
-        type: d3.annotationLabel,
-        x: 125,
-        y: 450,
-        dx: 0,
-        dy: -25
-      },
-      {
-        note: {
           label: "Peak so far"
-        },
-        connector: {
-          end: "arrow"
         },
         type: d3.annotationLabel,
         x: 545,
