@@ -81,4 +81,3 @@ function drawChart3(data) {
         .attr("height", function(d) { return heightChart3 - y(d.averageScore); })
         .attr("fill", "#E50914");
 }
-}
