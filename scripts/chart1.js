@@ -60,7 +60,7 @@ charts.chart1 = function() {
     const annotations = [
       {
         note: {
-          label: "Peak so far"
+          label: "The data is on upward trends since 2014"
         },
         connector: {
           end: "arrow"
