@@ -4,7 +4,8 @@ new fullpage('#fullpage', {
   autoScrolling: false,
   fitToSection: true,
   slidesNavigation: true,
-  slidesNavPosition: 'top',
+  slidesNavPosition: 'bottom',
+  controlArrows: false,
 
   //scrollOverflow: true,
 
