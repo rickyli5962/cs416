@@ -95,3 +95,4 @@ function drawChart2(data) {
       dy: -25
     }
   ]
+  }
