@@ -62,11 +62,11 @@ charts.chart1 = function() {
     const annotations = [
       {
         note: {
-          label: "Peak so far"
+          label: "The Neflix Originals has been increasing stadily since 2014"
         },
         type: d3.annotationLabel,
         x: 545,
-        y: 85,
+        y: 100,
         dx: 0,
         dy: -25
       }
