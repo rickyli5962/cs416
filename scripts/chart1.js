@@ -1,7 +1,7 @@
 charts.chart1 = function() {
   const margin = {top: 50, right: 50, bottom: 50, left: 50};
-  const width = 800;
-  const height = 600;
+  const width = 500;
+  const height = 300;
   const parseDateTime = d3.timeParse("%B %d, %Y");
   const svg = d3.select('#svg1')
       .attr('width', width + margin.left + margin.right)
@@ -66,7 +66,7 @@ charts.chart1 = function() {
           end: "arrow"
         },
         type: d3.annotationLabel,
-        x: 545,
+        x: 450,
         y: 85,
         dx: 0,
         dy: -25
