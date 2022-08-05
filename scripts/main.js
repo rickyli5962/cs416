@@ -6,7 +6,7 @@ new fullpage('#fullpage', {
   slidesNavigation: true,
   slidesNavPosition: 'top',
 
-  scrollOverflow: true,
+  //scrollOverflow: true,
 
   afterSlideLoad: function(section, origin, destination, direction) {
     var numberOfIntroduction = 2;
