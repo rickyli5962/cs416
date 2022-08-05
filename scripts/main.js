@@ -1,7 +1,7 @@
 // initialise fullpage.js
 new fullpage('#fullpage', {
   anchors: ['charts'],
-  sectionsColor: ['#f7f3de'],
+  sectionsColor: ['#ffffff'],
   autoScrolling: true,
   fitToSection: true,
   slidesNavigation: true,
