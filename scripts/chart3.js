@@ -1,10 +1,8 @@
 var finalDataChart3 = [];
-// initialise layout variables
-const marginChart3 = {top: 50, right: 20, bottom: 50, left: 60};
-const widthChart3 = 600;
-const heightChart3 = 400;
+const marginChart3 = {top: 50, right: 50, bottom: 50, left: 50};
+const widthChart3 = 500;
+const heightChart3 = 300;
 
-// initialise charts
 const svgChart3 = d3.select('#svg3')
     .attr('width', widthChart3 + marginChart3.left + marginChart3.right)
     .attr('height', heightChart3 + marginChart3.top + marginChart3.bottom)
@@ -18,8 +16,6 @@ charts.chart3 = function() {
 
 function getDataAndDraw() {
     const parseDateTime = d3.timeParse("%B %d, %Y");
-
-    // get data
     const file = 'data/NetflixOriginals.json';
     d3.cachedJson(file, 'chart1', function(data) {
         data.forEach(function(d) {
@@ -56,7 +52,6 @@ function drawChart3(data) {
     d3.select('#svg-3-parent-g').selectAll('*').remove();
     svgChart3.selectAll('rect').remove();
 
-    // X axis
     const x = d3.scaleBand()
         .range([0, widthChart3])
         .domain(data.map(function (d) {
@@ -70,14 +65,12 @@ function drawChart3(data) {
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end");
 
-    // Add Y axis
     const y = d3.scaleLinear()
         .domain([0, 7])
         .range([heightChart3, 0]);
     svgChart3.append("g")
         .call(d3.axisLeft(y));
 
-    // Bars
     svgChart3.selectAll("mybar")
         .data(data)
         .enter()
@@ -88,41 +81,4 @@ function drawChart3(data) {
         .attr("height", function(d) { return heightChart3 - y(d.averageScore); })
         .attr("fill", "#E50914");
 }
-
-const paramsChart3 = [
-    {
-        id: "#checkbox-2014",
-        year: 2014
-    },
-    {
-        id: "#checkbox-2015",
-        year: 2015
-    },
-    {
-        id: "#checkbox-2016",
-        year: 2016
-    },
-    {
-        id: "#checkbox-2017",
-        year: 2017
-    },
-    {
-        id: "#checkbox-2018",
-        year: 2018
-    },
-    {
-        id: "#checkbox-2019",
-        year: 2019
-    },
-    {
-        id: "#checkbox-2020",
-        year: 2020
-    },
-    {
-        id: "#checkbox-2021",
-        year: 2021
-    },
-];
-function updateChart3Data() {
-    getDataAndDraw();
 }
