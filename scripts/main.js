@@ -1,7 +1,7 @@
 new fullpage('#fullpage', {
   anchors: ['charts'],
   sectionsColor: ['#ffffff'],
-  autoScrolling: true,
+  autoScrolling: false,
   fitToSection: true,
   slidesNavigation: true,
   slidesNavPosition: 'top',
