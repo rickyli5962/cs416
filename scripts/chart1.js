@@ -55,7 +55,7 @@ charts.chart1 = function() {
         .attr("y", function(d) { return y(d.numOriginals); })
         .attr("width", x.bandwidth())
         .attr("height", function(d) { return height - y(d.numOriginals); })
-        .attr("fill", "#69b3a2")
+        .attr("fill", "#E50914")
 
     const annotations = [
       {
