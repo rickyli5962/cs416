@@ -1,5 +1,3 @@
-var finalDataChart2 = [];
-
 charts.chart2 = function() {
     const marginChart2 = {top: 50, right: 50, bottom: 50, left: 50};
     const widthChart2 = 500;
@@ -11,10 +9,10 @@ charts.chart2 = function() {
         .attr('transform', 'translate(' + marginChart2.left + ',' + marginChart2.top + ')')
         .attr('id', 'svg-2-parent-g');
 
-      const file = 'data/NetflixOriginals.json';
-      d3.cachedJson(file, 'chart2', function(data) {
-        data.forEach(function(d) {
-          d.date = parseDateTime(d.Premiere);
+    const file = 'data/NetflixOriginals.json';
+    d3.cachedJson(file, 'chart2', function(data) {
+         data.forEach(function(d) {
+             d.date = parseDateTime(d.Premiere);
         });
         data = data.filter(d => d.date != null);
         const dataGroupedByYear = Array.from(d3.group(data, d => d.date.getFullYear()));
