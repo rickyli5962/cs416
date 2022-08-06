@@ -84,20 +84,7 @@ function drawChart2(data) {
   const annotations = [
     {
       note: {
-        label: "Decline begins"
-      },
-      connector: {
-        end: "arrow"
-      },
-      type: d3.annotationLabel,
-      x: 250,
-      y: 75,
-      dx: 0,
-      dy: -25
-    },
-    {
-      note: {
-        label: "Worst scores since 2014"
+        label: "Athough the number of Netflix Original has been increasing over the year, the average IMDB raing has declined"
       },
       connector: {
         end: "arrow"
