@@ -1,5 +1,5 @@
 var finalDataChart3 = [];
-// initialise layout variables
+
 const marginChart3 = {top: 50, right: 20, bottom: 50, left: 60};
 const widthChart3 = 600;
 const heightChart3 = 400;
@@ -90,26 +90,6 @@ function drawChart3(data) {
 }
 
 const paramsChart3 = [
-    {
-        id: "#checkbox-2014",
-        year: 2014
-    },
-    {
-        id: "#checkbox-2015",
-        year: 2015
-    },
-    {
-        id: "#checkbox-2016",
-        year: 2016
-    },
-    {
-        id: "#checkbox-2017",
-        year: 2017
-    },
-    {
-        id: "#checkbox-2018",
-        year: 2018
-    },
     {
         id: "#checkbox-2019",
         year: 2019
