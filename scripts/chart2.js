@@ -1,4 +1,5 @@
 var finalDataChart2 = [];
+
 charts.chart2 = function() {
     const marginChart2 = {top: 50, right: 50, bottom: 50, left: 50};
     const widthChart2 = 500;
@@ -11,7 +12,7 @@ charts.chart2 = function() {
         .attr('id', 'svg-2-parent-g');
 
       const file = 'data/NetflixOriginals.json';
-      d3.cachedJson(file, 'chart1', function(data) {
+      d3.cachedJson(file, 'chart2', function(data) {
         data.forEach(function(d) {
           d.date = parseDateTime(d.Premiere);
         });
@@ -33,9 +34,6 @@ charts.chart2 = function() {
 
 
     function drawChart2(data) {
-      d3.select('#svg-2-parent-g').selectAll('*').remove();
-      svg.selectAll('rect').remove();
-
       const x = d3.scaleBand()
           .range([0, widthChart2])
           .domain(data.map(function (d) {
@@ -54,7 +52,6 @@ charts.chart2 = function() {
           .range([heightChart2, 0]);
       svg.append("g")
           .call(d3.axisLeft(y));
-
 
       svg.selectAll("mybar")
           .data(data)
