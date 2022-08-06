@@ -1,8 +1,8 @@
 var finalDataChart3 = [];
 
-const marginChart3 = {top: 50, right: 20, bottom: 50, left: 60};
-const widthChart3 = 600;
-const heightChart3 = 400;
+const marginChart3 = {top: 50, right: 50, bottom: 50, left: 50};
+const widthChart3 = 500;
+const heightChart3 = 300;
 
 const svgChart3 = d3.select('#svg3')
     .attr('width', widthChart3 + marginChart3.left + marginChart3.right)
