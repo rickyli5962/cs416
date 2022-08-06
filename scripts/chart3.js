@@ -83,40 +83,6 @@ function drawChart3(data) {
         .attr("fill", "#E50914");
 }
 
-const paramsChart3 = [
-    {
-        id: "#checkbox-2014",
-        year: 2014
-    },
-    {
-        id: "#checkbox-2015",
-        year: 2015
-    },
-    {
-        id: "#checkbox-2016",
-        year: 2016
-    },
-    {
-        id: "#checkbox-2017",
-        year: 2017
-    },
-    {
-        id: "#checkbox-2018",
-        year: 2018
-    },
-    {
-        id: "#checkbox-2019",
-        year: 2019
-    },
-    {
-        id: "#checkbox-2020",
-        year: 2020
-    },
-    {
-        id: "#checkbox-2021",
-        year: 2021
-    },
-];
 function updateChart3Data() {
     getDataAndDraw();
 }
