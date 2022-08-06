@@ -78,7 +78,7 @@ function drawChart2(data) {
       .attr("y", function(d) { return y(d.averageScore); })
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return heightChart2 - y(d.averageScore); })
-      .attr("fill", "#69b3a2")
+      .attr("fill", "#E50914")
 
   const annotations = [
     {
