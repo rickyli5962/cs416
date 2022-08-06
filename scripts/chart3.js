@@ -85,7 +85,7 @@ function drawChart3(data) {
         .attr("y", function(d) { return y(d.averageScore); })
         .attr("width", x.bandwidth())
         .attr("height", function(d) { return heightChart3 - y(d.averageScore); })
-        .attr("fill", "#69b3a2");
+        .attr("fill", "#E50914");
 }
 
 const paramsChart3 = [
